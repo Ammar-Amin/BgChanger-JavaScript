@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chai</title>
+    <style>
+        h1{
+            display: flex;
+            justify-content: center;
+        }
+        .container{
+            display: block;
+            width: 58%;
+            margin: 30px auto;
+        }
+        .button{
+            display: inline-block;
+            margin: 10px;
+            padding: 30px;
+            font-size: 22px;
+            font-weight: bold;
+            border: 2px solid rgb(7, 5, 5);
+        }
+        .button:hover{
+            color: aliceblue;
+            font-size: 25px;
+        }
+        #red{
+            background-color: red;
+        }
+        #orange{
+            background-color: orange;
+        }
+        #violet{
+            background-color: violet;
+        }
+        #aqua{
+            background-color: aqua;
+        }
+        #blue{
+            background-color: blue;
+        }
+        #green{
+            background-color: green;
+        }
+    </style>
+</head>
+<body>
+    <h1>Backgroud Colour Changer</h1>
+    <div class="container">
+        <div class="button" id="red">Red</div>
+        <div class="button" id="orange">Orange</div>
+        <div class="button" id="violet">Violet</div>
+        <div class="button" id="aqua">Aqua</div>
+        <div class="button" id="blue">Blue</div>
+        <div class="button" id="green">Green</div>
+    </div>    
+
+    <script>
+        let buttons = document.querySelectorAll('.button')
+        let body = document.querySelector('body')
+
+        buttons.forEach(function(button){
+            console.log(button);
+            button.addEventListener('click', function(e){
+                console.log(e);
+                console.log(e.target);
+                if(e.target.id === 'red'){
+                    body.style.backgroundColor = e.target.id;
+                }
+                if(e.target.id === 'orange'){
+                    body.style.backgroundColor = e.target.id;
+                }
+                if(e.target.id === 'violet'){
+                    body.style.backgroundColor = e.target.id;
+                }
+                if(e.target.id === 'aqua'){
+                    body.style.backgroundColor = e.target.id;
+                }
+                if(e.target.id === 'blue'){
+                    body.style.backgroundColor = e.target.id;
+                }
+                if(e.target.id === 'green'){
+                    body.style.backgroundColor = e.target.id;
+                }
+            });
+        });
+    </script>
+</body>
+</html>
